@@ -149,23 +149,23 @@ void Screen_EPD_EXT3_Fast::COG_getDataOTP()
 {
 #if defined(ARDUINO_FEATHER_ESP32)
 
-    hV_HAL_SPI3_define(SCK, MOSI) // SCK SDA
+    hV_HAL_SPI3_define(SCK, MOSI); // SCK SDA
 
 #elif defined(ARDUINO_XIAO_ESP32C3)
 
     // Board Xiao ESP32-C3 crashes if pins are not specified.
-    hV_HAL_SPI3_define(8, 9) // SCK SDA
+    hV_HAL_SPI3_define(8, 9); // SCK SDA
 
 #elif defined(ARDUINO_NANO_ESP32)
 
     // Board Arduino Nano ESP32 arduino_nano_nora v2.0.11
-    hV_HAL_SPI3_define(SCK, MOSI) // SCK SDA
+    hV_HAL_SPI3_define(SCK, MOSI); // SCK SDA
 
 #elif defined(ARDUINO_ARCH_ESP32)
 
     // void begin(int8_t sck=-1, int8_t miso=-1, int8_t mosi=-1, int8_t ss=-1);
     // Board ESP32-Pico-DevKitM-2 crashes if pins are not specified.
-    hV_HAL_SPI3_define(14, 12) // SCK SDA
+    hV_HAL_SPI3_define(14, 12); // SCK SDA
 
 #else
 
